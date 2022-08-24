@@ -2,10 +2,11 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Header } from "../components/Header";
 
-type movie = {
+export type movie = {
   id: number;
   title: string;
   categoryId: number;
+  description: string;
   image: string;
 };
 
@@ -23,14 +24,16 @@ export function Home() {
       <div className="overlay"></div>
       <div className="content-above-overlay">
         <Header />
-        {movies.map((movie) => (
-          <ul className="movies-ul">
+        <ul className="movies-ul">
+          {movies.map((movie) => (
             <li className="movies-li">
-              <img src={movie.image} className="image"></img>
-              <h2>{movie.title}</h2>
+              <Link to={`/movies/${movie.id}`}>
+                <img src={movie.image} className="image"></img>
+                <h3>{movie.title}</h3>
+              </Link>
             </li>
-          </ul>
-        ))}
+          ))}
+        </ul>
       </div>
     </>
   );

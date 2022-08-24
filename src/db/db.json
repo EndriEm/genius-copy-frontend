@@ -2,23 +2,23 @@
   "categories": [
     {
       "id": 1,
-      "name": "drama"
+      "name": "Drama"
     },
     {
       "id": 2,
-      "name": "thriller"
+      "name": "Thriller"
     },
     {
       "id": 3,
-      "name": "action"
+      "name": "Action"
     },
     {
       "id": 4,
-      "name": "serials"
+      "name": "TV Series"
     },
     {
       "id": 5,
-      "name": "anime"
+      "name": "Anime"
     }
   ],
   "movies": [
@@ -26,60 +26,70 @@
       "id": 1,
       "title": "Gladiator",
       "categoryId": 1,
+      "description": "Gladiator is a 2000 epic historical drama film directed by Ridley Scott and written by David Franzoni, John Logan, and William Nicholson. The film was co-produced and released by DreamWorks Pictures and Universal Pictures. DreamWorks Pictures distributed the film in North America while Universal Pictures released it internationally through United International Pictures. It stars Russell Crowe, Joaquin Phoenix, Connie Nielsen, Ralf Möller, Oliver Reed (in his final role), Djimon Hounsou, Derek Jacobi, John Shrapnel, Richard Harris, and Tommy Flanagan. Crowe portrays Roman general Maximus Decimus Meridius, who is betrayed when Commodus, the ambitious son of Emperor Marcus Aurelius, murders his father and seizes the throne. Reduced to slavery, Maximus becomes a gladiator and rises through the ranks of the arena to avenge the murders of his family and his emperor.",
       "image": "https://flxt.tmsimg.com/assets/p24674_p_v8_ae.jpg"
     },
     {
       "id": 2,
       "title": "HEAT",
       "categoryId": 3,
+      "description": "Heat is a 1995 American crime drama film[3] written and directed by Michael Mann. It features an ensemble cast led by Al Pacino and Robert De Niro, with Tom Sizemore, Jon Voight, and Val Kilmer in supporting roles.[4] The film follows the conflict between an LAPD detective, played by Pacino, and a career thief, played by De Niro, while also depicting its effect on their professional relationships and personal lives.",
       "image": "https://resizing.flixster.com/JvvCXACkbTgmxNHSkUF-1d1Dnrw=/206x305/v2/https://flxt.tmsimg.com/assets/p17455_p_v8_ae.jpg"
     },
     {
       "id": 3,
       "title": "O.C.",
       "categoryId": 4,
+      "description": "A troubled youth becomes embroiled in the lives of a close-knit group of people in the wealthy, upper-class neighborhood of Newport Beach, Orange County, California.",
       "image": "https://m.media-amazon.com/images/M/MV5BMWIzZTA0ZDYtOGZiNS00MDRiLWJkNzMtN2RiMzVmMjZjYTJiXkEyXkFqcGdeQXVyODIxOTMwMjk@._V1_FMjpg_UX1000_.jpg"
     },
     {
       "id": 4,
       "title": "Mission Impossible 2",
       "categoryId": 3,
+      "description": "Mission: Impossible 2 (stylized as M:I-2)[1] is a 2000 action spy film directed by John Woo and produced by and starring Tom Cruise. It is the sequel to Mission: Impossible (1996) and the second installment in the Mission: Impossible film series. The film also stars Dougray Scott, Thandiwe Newton, Richard Roxburgh, John Polson, Brendan Gleeson, Rade Sherbedgia, and Ving Rhames. In Mission: Impossible 2, Ethan Hunt (Cruise) teams with professional thief Nyah Nordoff-Hall (Newton) to find and destroy a genetically modified disease held by rogue Impossible Missions Force (IMF) agent Sean Ambrose (Scott), who is Hall's former lover.",
       "image": "https://m.media-amazon.com/images/M/MV5BN2RkYWVkZDQtNTMxMi00NWQ4LWE2ODctNmQzOWM2NjQzYzdlXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_.jpg"
     },
     {
       "id": 5,
       "title": "Unfaithful",
       "categoryId": 2,
+      "description": "A New York suburban couple's marriage goes dangerously awry when the wife indulges in an adulterous fling.",
       "image": "https://flxt.tmsimg.com/assets/p29634_p_v12_al.jpg"
     },
     {
       "id": 6,
       "title": "Naruto Shippuden",
       "categoryId": 5,
+      "description": "Naruto Uzumaki, is a loud, hyperactive, adolescent ninja who constantly searches for approval and recognition, as well as to become Hokage, who is acknowledged as the leader and strongest of all ninja in the village.",
       "image": "https://upload.wikimedia.org/wikipedia/en/thumb/4/49/Shippudenkeyvisual.png/220px-Shippudenkeyvisual.png"
     },
     {
       "id": 7,
       "title": "The Usual Suspects",
       "categoryId": 2,
+      "description": "A sole survivor tells of the twisty events leading up to a horrific gun battle on a boat, which began when five criminals met at a seemingly random police lineup.",
       "image": "https://m.media-amazon.com/images/M/MV5BYTViNjMyNmUtNDFkNC00ZDRlLThmMDUtZDU2YWE4NGI2ZjVmXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg"
     },
     {
       "id": 8,
       "title": "Dragon Ball",
       "categoryId": 5,
+      "description": "With the help of the powerful Dragonballs, a team of fighters led by the saiyan warrior Goku defend the planet earth from extraterrestrial enemies.",
       "image": "https://cdn2.storyasset.link/smwEuvHz8qeK3KN7D3dvTLVeNxO2/HD-wallpaper-dragon-ball-z-anime-dragon-ball-gohan-goku-movie-vegeta-ms-lombkqqgek.jpg"
     },
     {
       "id": 9,
       "title": "Californication",
       "categoryId": 4,
+      "description": "A writer tries to juggle his career, his relationship with his daughter and his ex-girlfriend, as well as his appetite for beautiful women.",
       "image": "https://flxt.tmsimg.com/assets/p7895125_b_v13_aa.jpg"
     },
     {
       "id": 10,
       "title": "American Sniper",
       "categoryId": 1,
+      "description": "Navy S.E.A.L. sniper Chris Kyle's pinpoint accuracy saves countless lives on the battlefield and turns him into a legend. Back home with his family after four tours of duty, however, Chris finds that it is the war he can't leave behind.",
       "image": "https://m.media-amazon.com/images/M/MV5BMTkxNzI3ODI4Nl5BMl5BanBnXkFtZTgwMjkwMjY4MjE@._V1_.jpg"
     }
   ]

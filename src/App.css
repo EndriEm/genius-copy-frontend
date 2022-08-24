@@ -5,17 +5,20 @@
   font-family: sans-serif;
 }
 
+/*home css*/
+
 .App {
-  height: 100vh;
+  height: 200vh;
   background: url(assets/background.jpg);
   background-position: center;
   background-size: cover;
   position: relative;
+  text-decoration: none;
 }
 
 .overlay {
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.9);
   top: 0;
   bottom: 0;
   left: 0;
@@ -46,10 +49,12 @@
 
 .home {
   color: #e50914;
+  text-decoration: none;
 }
 
 .categories {
   color: #e50914;
+  text-decoration: none;
 }
 
 .search {
@@ -79,9 +84,10 @@
 .movies-ul {
   display: grid;
   grid-template-columns: auto auto auto auto;
-  gap: 20px;
+  gap: 50px;
   margin-left: 50px;
   margin-right: 50px;
+  margin-top: 50px;
   list-style: none;
 }
 
@@ -90,6 +96,117 @@
 }
 
 .image {
-  height: 100px;
-  width: fit-content;
+  height: 200px;
+}
+
+/*signin css*/
+
+.wrapper {
+  display: grid;
+  place-items: center;
+  margin-top: 40px;
+}
+
+.section1-wrapper {
+  margin-top: 40px;
+  display: grid;
+  background-color: rgba(0, 0, 0, 0.6);
+  align-content: center;
+  justify-content: center;
+  height: 480px;
+  width: 450px;
+  border-radius: 7px;
+}
+
+form {
+  display: grid;
+  gap: 1rem;
+}
+
+.h1 {
+  color: white;
+  text-align: start;
+  margin-bottom: 1.5rem;
+}
+
+.get-started {
+  display: grid;
+  margin-top: 1.7rem;
+}
+
+.input-GS {
+  background-color: #222;
+  border-style: none;
+  border-radius: 5px;
+  font-size: 17px;
+  width: 320px;
+  padding-left: 15px;
+  height: 50px;
+}
+
+.button-GS {
+  background-color: #e50914;
+  color: white;
+  font-size: 17px;
+  font-family: sans-serif;
+  border-radius: 5px;
+  border-style: none;
+  width: 320px;
+  margin-top: 1.5rem;
+  height: 48px;
+}
+
+#email {
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  padding-left: 15px;
+}
+
+#password {
+  padding-left: 15px;
+}
+
+/*categories*/
+
+.categories-ul {
+  display: grid;
+  margin-top: 100px;
+  grid-template-columns: repeat(auto-fit, 300px);
+  grid-gap: 2rem;
+  place-content: center;
+}
+
+.categories-li {
+  display: grid;
+  height: 150px;
+  place-items: center;
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+}
+
+/*single movie*/
+
+.movie-details {
+  display: grid;
+  margin: 50px;
+  row-gap: 2rem;
+  padding: 2rem;
+  width: 50%;
+  
+  
+ 
+}
+
+.image2{
+  height: 500px;
+  
+}
+
+.title2{
+  color: white;
+}
+
+.description2{
+  color: white;
 }
