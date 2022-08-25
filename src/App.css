@@ -81,6 +81,25 @@
   cursor: pointer;
 }
 
+.post-button1 {
+  background-color: #e50914;
+  color: white;
+  font-size: medium;
+  font-family: sans-serif;
+  border-radius: 3px;
+  border-style: none;
+  margin-right: 20px;
+  padding: 7px 15px;
+  text-decoration: none;
+  cursor: pointer;
+  border-style: none;
+  border-radius: 5px;
+  font-size: 17px;
+  width: 250px;
+  padding-left: 15px;
+  height: 40px;
+}
+
 .movies-ul {
   display: grid;
   grid-template-columns: auto auto auto auto;
@@ -209,4 +228,10 @@ form {
 
 .description2{
   color: white;
+}
+
+
+.form{
+  margin: 100px;
+  display: grid;
 }

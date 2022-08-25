@@ -10,8 +10,13 @@ type movie = {
   image: string;
 };
 
+type comment = {
+  description: string;
+};
+
 export function Movie() {
   const [movie, setMovie] = useState<movie>();
+  const [comments, setComments] = useState<comment[]>([]);
   const params = useParams();
   useEffect(() => {
     fetch(`http://localhost:4999/movies/${params.movieId}`)
@@ -29,14 +34,24 @@ export function Movie() {
 
           <h2 className="title2">{movie?.title}</h2>
           <p className="description2">{movie?.description}</p>
-          <textarea
-            name="textarea"
-            id="textarea"
-            cols="20"
-            rows="10"
-            className="textarea"
-          ></textarea>
-          <button className="sign-button1">Comment</button>
+          <form
+            onSubmit={(event) => {
+              event.preventDefault();
+              const comment = {
+                description: event.target.textarea.value,
+              };
+              setComments([...comments, comment]);
+            }}
+          >
+            <textarea
+              name="textarea"
+              id="textarea"
+              cols="20"
+              rows="10"
+              className="textarea"
+            ></textarea>
+            <button className="sign-button1">Comment</button>
+          </form>
         </div>
       </div>
     </>

@@ -34,6 +34,26 @@ export function Home() {
             </li>
           ))}
         </ul>
+        <form className="form"
+        onSubmit={(event) => {
+          event.preventDefault();
+          const movie = {
+            id: Number(event.target.id.value),
+            title: event.target.title.value,
+            categoryId: Number(event.target.categoryId.value),
+            description: event.target.description.value,
+            image: event.target.image.value,
+          };
+          setMovies([...movies, movie]);
+        }}
+        >
+          <input type="text" name="id" className="search" placeholder="id"/>
+          <input type="text" name="title" className="search" placeholder="title"/>
+          <input type="text" name="categoryId" className="search" placeholder="categoryId"/>
+          <input type="text" name="description" className="search" placeholder="description"/>
+          <input type="text" name="image" className="search" placeholder="image link"/>
+          <button className="post-button1">Post</button>
+        </form>
       </div>
     </>
   );
