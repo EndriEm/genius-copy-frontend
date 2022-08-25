@@ -37,6 +37,7 @@ export function Movie() {
           <form
             onSubmit={(event) => {
               event.preventDefault();
+              
               const comment = {
                 description: event.target.textarea.value,
               };
