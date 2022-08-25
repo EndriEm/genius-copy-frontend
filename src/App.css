@@ -196,12 +196,13 @@ form {
 }
 
 .categories-li {
-  display: grid;
+  list-style: none;
   height: 150px;
   place-items: center;
   text-align: center;
   color: white;
   font-size: 2rem;
+  gap: 2rem;
 }
 
 /*single movie*/
@@ -234,4 +235,26 @@ form {
 .form{
   margin: 100px;
   display: grid;
+}
+
+.delete-button{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+ background-color: rgba(0, 0, 0, 0.1);
+  color: #e50914;
+  margin-left: 10px;
+  border-style: none;
+}
+
+.comments-field{
+  background-color: white;
+  height: 150px;
+  width: 46%;
+  margin-left: 85px;
+}
+
+.review{
+  color: black;
+  padding: 10px;
 }

@@ -11,17 +11,27 @@ type movie = {
 };
 
 type comment = {
-  description: string;
+  id: number;
+  movieId: number;
+  content: string;
 };
 
 export function Movie() {
   const [movie, setMovie] = useState<movie>();
+
   const [comments, setComments] = useState<comment[]>([]);
+
   const params = useParams();
   useEffect(() => {
     fetch(`http://localhost:4999/movies/${params.movieId}`)
       .then((resp) => resp.json())
       .then((movies) => setMovie(movies));
+  }, []);
+
+  useEffect(() => {
+    fetch(`http://localhost:4999/comments?movieId=${params.itemId}`)
+      .then((resp) => resp.json())
+      .then((comments) => setComments(comments));
   }, []);
 
   return (
@@ -34,18 +44,16 @@ export function Movie() {
 
           <h2 className="title2">{movie?.title}</h2>
           <p className="description2">{movie?.description}</p>
+
           <form
             onSubmit={(event) => {
               event.preventDefault();
-              
-              const comment = {
-                description: event.target.textarea.value,
-              };
-              setComments([...comments, comment]);
+
+             
             }}
           >
             <textarea
-              name="textarea"
+              name="content"
               id="textarea"
               cols="20"
               rows="10"
@@ -53,7 +61,13 @@ export function Movie() {
             ></textarea>
             <button className="sign-button1">Comment</button>
           </form>
+         
         </div>
+        <div className="comments-field">
+            {comments.map((comment) => (
+              <p className="review">{comment?.content}</p>
+            ))}
+          </div>
       </div>
     </>
   );

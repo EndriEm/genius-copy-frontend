@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Header } from "../components/Header";
 
-export type movie = {
+export type Movie = {
   id: number;
   title: string;
   categoryId: number;
@@ -11,7 +11,7 @@ export type movie = {
 };
 
 export function Home() {
-  const [movies, setMovies] = useState<movie[]>([]);
+  const [movies, setMovies] = useState<Movie[]>([]);
 
   useEffect(() => {
     fetch("http://localhost:4999/movies")
