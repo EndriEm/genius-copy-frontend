@@ -13,6 +13,7 @@ type movie = {
 type comment = {
   id: number;
   movieId: number;
+  name: string;
   content: string;
 };
 
@@ -54,22 +55,29 @@ export function Movie() {
                   "content-type": "application/json",
                 },
                 body: JSON.stringify({
-                  id: Number(event.target.id.value),
+                  id: Math.floor(Math.random()*100),
 
                   movieId: Number(event.target.movieId.value),
+                  name: event.target.name.value,
                   content: event.target.content.value,
                 }),
               })
                 .then((resp) => resp.json())
-                .then((commentFromServer) => setComments(commentFromServer));
+                .then((commentsFromServer) => setComments(commentsFromServer));
             }}
           >
-            <input type="text" name="id" className="search" placeholder="id" />
+            
             <input
               type="text"
               name="movieId"
               className="search"
               placeholder="movieId"
+            />
+            <input
+              type="text"
+              name="name"
+              className="search"
+              placeholder="Name"
             />
             <textarea
               name="content"
@@ -85,7 +93,8 @@ export function Movie() {
           <div>
             {comments.map((comment) => (
               <div className="field-elements">
-                <p className="review">-{comment?.content}</p>
+                <h3>{comment.name}</h3>
+                <p className="review">- {comment?.content}</p>
                 <button
                   className="delete-button"
                   onClick={(event) => {

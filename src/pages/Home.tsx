@@ -29,7 +29,7 @@ export function Home() {
             <li className="movies-li">
               <Link to={`/movies/${movie.id}`}>
                 <img src={movie.image} className="image"></img>
-                <h3>{movie.title}</h3>
+                <h3 className="movie-title">{movie.title}</h3>
               </Link>
             </li>
           ))}
@@ -44,7 +44,7 @@ export function Home() {
                 "content-type": "application/json",
               },
               body: JSON.stringify({
-                id: Number(event.target.id.value),
+                id: Math.floor(Math.random() * 100),
                 title: event.target.title.value,
                 categoryId: Number(event.target.categoryId.value),
                 description: event.target.description.value,
@@ -55,7 +55,6 @@ export function Home() {
               .then((moviesFromServer) => setMovies(moviesFromServer));
           }}
         >
-          <input type="text" name="id" className="search" placeholder="id" />
           <input
             type="text"
             name="title"

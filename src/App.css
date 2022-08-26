@@ -11,10 +11,13 @@
 .App {
   height: 250vh;
   background: url(assets/background.jpg);
-  background-position: center;
+  background-position: center center;
+  background-attachment: fixed;
   background-size: cover;
   position: relative;
   text-decoration: none;
+  background-repeat: no-repeat;
+  
 }
 
 .overlay {
@@ -24,6 +27,7 @@
   bottom: 0;
   left: 0;
   right: 0;
+  
 }
 
 .content-above-overlay {
@@ -266,4 +270,8 @@ form {
 textarea {
   padding: 10px;
   font-size: medium;
+}
+
+.movie-title{
+  color: white;
 }

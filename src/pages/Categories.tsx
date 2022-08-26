@@ -7,13 +7,15 @@ type Category = {
   name: string;
 };
 
+
+
 export function Categories() {
   const [categories, setCategories] = useState<Category[]>([]);
 
   useEffect(() => {
     fetch("http://localhost:4999/categories")
       .then((resp) => resp.json())
-      .then((categoriesFromServer) => setCategories(categoriesFromServer));
+      .then((categories) => setCategories(categories));
   }, []);
 
   return (
@@ -25,7 +27,9 @@ export function Categories() {
           {categories.map((category) => (
             <>
               <li className="categories-li">
-                <Link to={`/categories/${category.id}`}>{category.name}</Link>
+                <Link to={`/categories/${category.id}`} className="movie-title" key={category.id}>
+                  {category.name}
+                </Link>
                 <button
                   className="delete-button"
                   onClick={(event) => {
@@ -34,8 +38,8 @@ export function Categories() {
                       method: "DELETE",
                     })
                       .then((resp) => resp.json())
-                      .then((categoriesFromServer) =>
-                        setCategories(categoriesFromServer)
+                      .then((categories) =>
+                        setCategories(categories)
                       );
                   }}
                 >
@@ -61,9 +65,10 @@ export function Categories() {
               }),
             })
               .then((resp) => resp.json())
-              .then((categoriesFromServer) =>
-                setCategories(categoriesFromServer)
+              .then((categories) =>
+                setCategories(categories)
               );
+            console.log(categories);
           }}
         >
           <input type="text" name="id" className="search" placeholder="id" />
