@@ -3,12 +3,13 @@
   padding: 0;
   box-sizing: border-box;
   font-family: sans-serif;
+  text-decoration: none;
 }
 
 /*home css*/
 
 .App {
-  height: 200vh;
+  height: 250vh;
   background: url(assets/background.jpg);
   background-position: center;
   background-size: cover;
@@ -213,48 +214,56 @@ form {
   row-gap: 2rem;
   padding: 2rem;
   width: 50%;
-  
-  
- 
 }
 
-.image2{
+.image2 {
   height: 500px;
-  
 }
 
-.title2{
+.title2 {
   color: white;
 }
 
-.description2{
+.description2 {
   color: white;
 }
 
-
-.form{
+.form {
   margin: 100px;
   display: grid;
 }
 
-.delete-button{
+.delete-button {
   width: 20px;
   height: 20px;
   border-radius: 50%;
- background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.1);
   color: #e50914;
   margin-left: 10px;
   border-style: none;
 }
 
-.comments-field{
+.comments-field {
   background-color: white;
-  height: 150px;
+  height: auto;
   width: 46%;
   margin-left: 85px;
+  display: grid;
+  gap: 10px;
 }
 
-.review{
+.field-elements {
+  margin: 10px;
+  gap: 10px;
+}
+
+.review {
   color: black;
   padding: 10px;
+  display: inline-block;
+}
+
+textarea {
+  padding: 10px;
+  font-size: medium;
 }

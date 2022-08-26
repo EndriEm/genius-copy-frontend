@@ -29,7 +29,7 @@ export function Movie() {
   }, []);
 
   useEffect(() => {
-    fetch(`http://localhost:4999/comments?movieId=${params.itemId}`)
+    fetch(`http://localhost:4999/comments?movieId=${params.movieId}`)
       .then((resp) => resp.json())
       .then((comments) => setComments(comments));
   }, []);
@@ -48,10 +48,29 @@ export function Movie() {
           <form
             onSubmit={(event) => {
               event.preventDefault();
+              fetch("http://localhost:4999/comments", {
+                method: "POST",
+                headers: {
+                  "content-type": "application/json",
+                },
+                body: JSON.stringify({
+                  id: Number(event.target.id.value),
 
-             
+                  movieId: Number(event.target.movieId.value),
+                  content: event.target.content.value,
+                }),
+              })
+                .then((resp) => resp.json())
+                .then((commentFromServer) => setComments(commentFromServer));
             }}
           >
+            <input type="text" name="id" className="search" placeholder="id" />
+            <input
+              type="text"
+              name="movieId"
+              className="search"
+              placeholder="movieId"
+            />
             <textarea
               name="content"
               id="textarea"
@@ -61,13 +80,31 @@ export function Movie() {
             ></textarea>
             <button className="sign-button1">Comment</button>
           </form>
-         
         </div>
         <div className="comments-field">
+          <div>
             {comments.map((comment) => (
-              <p className="review">{comment?.content}</p>
+              <div className="field-elements">
+                <p className="review">-{comment?.content}</p>
+                <button
+                  className="delete-button"
+                  onClick={(event) => {
+                    event.preventDefault();
+                    fetch(`http://localhost:4999/comments/${comment.id}`, {
+                      method: "DELETE",
+                    })
+                      .then((resp) => resp.json())
+                      .then((commentsFromServer) =>
+                        setComments(commentsFromServer)
+                      );
+                  }}
+                >
+                  X
+                </button>
+              </div>
             ))}
           </div>
+        </div>
       </div>
     </>
   );
