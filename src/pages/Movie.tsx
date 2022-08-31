@@ -21,8 +21,11 @@ export function Movie() {
   const [movie, setMovie] = useState<movie>();
 
   const [comments, setComments] = useState<comment[]>([]);
+  
+  
 
   const params = useParams();
+  
   useEffect(() => {
     fetch(`http://localhost:4999/movies/${params.movieId}`)
       .then((resp) => resp.json())

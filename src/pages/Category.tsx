@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import {  useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Header } from "../components/Header";
 
@@ -26,7 +26,7 @@ export function Category(){
         <>
       <div className="overlay"></div>
       <div className="content-above-overlay">
-        <Header />
+        <Header  />
         <ul className="movies-ul">
         {categoryMovies.map((movie) => (
             <li className="movies-li">

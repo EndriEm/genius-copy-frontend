@@ -13,19 +13,25 @@ export type Movie = {
 export function Home() {
   const [movies, setMovies] = useState<Movie[]>([]);
 
+  const [search, setSearch] = useState("")
+
+  const searchMovies = movies.filter((movie) => movie.title.toLowerCase().includes(search.toLowerCase()))
+
   useEffect(() => {
     fetch("http://localhost:4999/movies")
       .then((resp) => resp.json())
       .then((moviesFromServer) => setMovies(moviesFromServer));
   }, []);
 
+  
+
   return (
     <>
       <div className="overlay"></div>
       <div className="content-above-overlay">
-        <Header />
+        <Header setSearch={setSearch}/>
         <ul className="movies-ul">
-          {movies.map((movie) => (
+          {searchMovies.map((movie) => (
             <li className="movies-li">
               <Link to={`/movies/${movie.id}`}>
                 <img src={movie.image} className="image"></img>

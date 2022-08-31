@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import {  useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Header } from "../components/Header";
 
@@ -22,7 +22,7 @@ export function Categories() {
     <>
       <div className="overlay"></div>
       <div className="content-above-overlay">
-        <Header />
+        <Header  />
         <ul className="categories-ul">
           {categories.map((category) => (
             <>
@@ -67,8 +67,9 @@ export function Categories() {
               .then((resp) => resp.json())
               .then((categories) =>
                 setCategories(categories)
+              
               );
-            console.log(categories);
+            
           }}
         >
           <input type="text" name="id" className="search" placeholder="id" />
