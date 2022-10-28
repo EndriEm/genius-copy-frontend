@@ -10,8 +10,8 @@
 
 .App {
   height: 250vh;
-  background: url(assets/background.jpg);
-  background-position: center center;
+  background: url(assets/Beatport-Logo-Orb.jpg);
+  background-position: center;
   background-attachment: fixed;
   background-size: cover;
   position: relative;
@@ -22,7 +22,7 @@
 
 .overlay {
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.7);
   top: 0;
   bottom: 0;
   left: 0;
@@ -48,17 +48,17 @@
 }
 
 .netflix {
-  color: #e50914;
+  color: #185f33;
   font-style: oblique;
 }
 
 .home {
-  color: #e50914;
+  color: #093b1c;
   text-decoration: none;
 }
 
 .categories {
-  color: #e50914;
+  color: #185f33;
   text-decoration: none;
 }
 
@@ -74,7 +74,7 @@
 }
 
 .sign-button1 {
-  background-color: #e50914;
+  background-color: #185f33;
   color: white;
   font-size: medium;
   font-family: sans-serif;
@@ -87,7 +87,7 @@
 }
 
 .post-button1 {
-  background-color: #e50914;
+  background-color: #185f33;
   color: white;
   font-size: medium;
   font-family: sans-serif;
@@ -134,7 +134,7 @@
 .section1-wrapper {
   margin-top: 40px;
   display: grid;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.4);
   align-content: center;
   justify-content: center;
   height: 480px;
@@ -169,7 +169,7 @@ form {
 }
 
 .button-GS {
-  background-color: #e50914;
+  background-color: #185f33;
   color: white;
   font-size: 17px;
   font-family: sans-serif;
@@ -218,10 +218,12 @@ form {
   row-gap: 2rem;
   padding: 2rem;
   width: 50%;
+  justify-content: center;
+  align-items: center;
 }
 
 .image2 {
-  height: 500px;
+  height: 300px;
 }
 
 .title2 {
@@ -242,7 +244,7 @@ form {
   height: 20px;
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.1);
-  color: #e50914;
+  color: #185f33;
   margin-left: 10px;
   border-style: none;
 }
@@ -273,5 +275,18 @@ textarea {
 }
 
 .movie-title{
+  color: white;
+}
+
+
+.message{
+  color: white;
+}
+
+.signup{
+  color:#185f33;
+}
+
+.songtitle{
   color: white;
 }

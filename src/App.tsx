@@ -3,12 +3,13 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { Header } from "./components/Header";
-import { Categories } from "./pages/Categories";
-import { Category } from "./pages/Category";
+import {  Genres } from "./pages/Genres";
+import {  Genre } from "./pages/Genre";
 
 import { Home } from "./pages/Home";
-import { Movie } from "./pages/Movie";
+import { Song } from "./pages/Song";
 import { SignIn } from "./pages/SignIn";
+import { SignUp } from "./pages/SignUp";
 
 function App() {
   return (
@@ -19,10 +20,11 @@ function App() {
         <Route path="*" element={<h1>Page not found</h1>} />
         <Route index element={<Navigate to="/home" />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/categories" element={<Categories />} />
-        <Route path="/categories/:itemId" element={<Category />} />
-        <Route path="/movies/:movieId" element={<Movie />} />
+        <Route path="/genres" element={<Genres />} />
+        <Route path="/genres/:id" element={<Genre />} />
+        <Route path="/songs/:id" element={<Song />} />
         <Route path="/sign-in" element={<SignIn />} />
+        <Route path="/sign-up" element={<SignUp />} />
       
        
       </Routes>

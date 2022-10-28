@@ -1,16 +1,14 @@
 import { Link } from "react-router-dom";
-import { Header } from "../components/Header";
 
-export function SignIn() {
+export function SignUp() {
   return (
     <>
       <div className="overlay"></div>
       <div className="content-above-overlay">
-        <Header />
         <div className="wrapper">
           <div className="section1-wrapper">
             <form>
-              <h1 className="h1">Sign In</h1>
+              <h1 className="h1">Sign Up</h1>
               <input
                 id="name"
                 name="name"
@@ -33,17 +31,15 @@ export function SignIn() {
                 type="password"
                 placeholder="Password"
                 className="input-GS"
-                required
               />
 
               <button className="button-GS">
-                <b>Sign In</b>
+                <b>Register</b>
               </button>
-
               <p className="message">
-                Not Registered?{" "}
-                <Link to="/sign-up" className="signup">
-                  SIGN UP
+                Registered?{" "}
+                <Link to="/sign-in" className="signup">
+                  SIGN IN
                 </Link>
               </p>
             </form>
