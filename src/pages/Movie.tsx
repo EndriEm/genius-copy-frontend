@@ -37,7 +37,14 @@ export function Movie() {
       .then((resp) => resp.json())
       .then((comments) => setComments(comments));
   }, []);
+  
+  function createNewMovie (event: any){let newMovie = {
+    id: Math.floor(Math.random()*100),
 
+    movieId: Number(event.target.movieId.value),
+    name: event.target.name.value,
+    content: event.target.content.value,
+  }
   return (
     <>
       <div className="overlay"></div>
@@ -50,6 +57,7 @@ export function Movie() {
           <p className="description2">{movie?.description}</p>
 
           <form
+          
             onSubmit={(event) => {
               event.preventDefault();
               fetch("http://localhost:4999/comments", {
@@ -57,16 +65,11 @@ export function Movie() {
                 headers: {
                   "content-type": "application/json",
                 },
-                body: JSON.stringify({
-                  id: Math.floor(Math.random()*100),
-
-                  movieId: Number(event.target.movieId.value),
-                  name: event.target.name.value,
-                  content: event.target.content.value,
-                }),
+                
+                body: JSON.stringify(newMovie),
               })
                 .then((resp) => resp.json())
-                .then((commentsFromServer) => setComments(commentsFromServer));
+                .then((newMovie) => setComments([...comments, newMovie]));
             }}
           >
             
@@ -100,15 +103,16 @@ export function Movie() {
                 <p className="review">- {comment?.content}</p>
                 <button
                   className="delete-button"
-                  onClick={(event) => {
-                    event.preventDefault();
+                  onClick={() => {
+                    
                     fetch(`http://localhost:4999/comments/${comment.id}`, {
                       method: "DELETE",
                     })
                       .then((resp) => resp.json())
-                      .then((commentsFromServer) =>
-                        setComments(commentsFromServer)
-                      );
+                      const copyComments = structuredClone(comments)
+                      let deletedComments = copyComments.filter(target => target.id !== comment.id)
+                      setComments(deletedComments)
+                      
                   }}
                 >
                   X
@@ -119,5 +123,5 @@ export function Movie() {
         </div>
       </div>
     </>
-  );
+  )
 }
